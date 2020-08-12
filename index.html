@@ -2,13 +2,27 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Etch-a-Sketch</title>
-    <link rel="stylesheet" href="styles.css">
+    <link type="text/css" rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <content id="container">
-  
-    </content>
+    <header>
+      <h1>Etch-a-Sketch</h1>
+    </header>
+    <main id="container">
+    </main>
+    <div id="options">
+      <div class="option" id="size">Size
+        <input id="grid-size" type="number" min="1" max="100" value="16" placeholder="Size">
+      </div>
+      <div class="option">
+        <label for="color">Pick a color</label>
+        <input type="color" id="color" name="color" value="#000">
+      </div>
+      <div class="option" id="random">Random</div>
+      <div class="option" id="clear">Clear</div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
