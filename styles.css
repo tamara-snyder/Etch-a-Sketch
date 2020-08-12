@@ -1,12 +1,4 @@
-/*html {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  display: block;
-  background-color: #eee;
-  text-align: center;
-}*/
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Teko&display=swap');
 
 body {
   text-align: center;
@@ -15,29 +7,17 @@ body {
   width: 100%;
   min-width: 390px;
   background-color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: 'Teko', sans-serif;
+  color: #545454;
+  overflow: hidden;
 }
 
-.burger {
-  display: inline-block;
-}
-
-#options {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-content: center;
-  width: 80%;
-  margin: 10vh auto;
-}
-
-.option {
-  width: 15%;
-  font-size: calc(0.5rem + 1vw);
-  padding: 5px;
-  margin: 0 auto 10px auto;
-  border: solid 1px;
-  border-radius: 4px;
-  cursor: pointer;
+h1 {
+  margin-top: 3vh;
+  font-family: 'Monoton', cursive;
+  font-size: 2.3rem;
 }
 
 #container {
@@ -46,15 +26,70 @@ body {
   grid-template-rows: repeat(var(--grid-columns), auto);
   width: 500px;
   height: 500px;
-  margin: 8vh auto 0 auto;
-  border: solid 1px;
+  margin: 7vh auto 0 auto;
+  border: solid 2px #d5d5d5;
+  box-shadow: 5px 5px 30px 5px #e5e5e5;
 }
 
 .square {
-  margin: 1px;
+  border: solid 1px #f1f1f1;
+}
+
+#options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 70%;
+  max-width: 500px;
+  margin: 8vh auto;
+}
+
+.option {
+  width: 30%;
+  padding: 5px;
+  margin: 0 auto 10px auto;
+  border: solid 2px #d5d5d5;
+  border-radius: 4px;
+  box-shadow: 2px 4px 10px #d5d5d5;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f6f6f6;
+  transition: 0.25s;
+}
+
+#size:active {
+  transform: translate(0px, 1px);
+  box-shadow: none;
+}
+
+#clear:active {
+  transform: translate(0px, 1px);
+  box-shadow: none;
+}
+
+input {
+  font-family: 'Teko', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-align: center;
+  border: solid 1px #d5d5d5;
+  color: #545454;
 }
 
 @media screen and (max-width: 555px) {
+  h1 {
+    margin-top: 10vh;
+  }
+  #container {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 420px) {
   #container {
     width: 300px;
     height: 300px;
